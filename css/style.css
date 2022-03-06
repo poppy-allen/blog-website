@@ -7,7 +7,8 @@ body {
 
 /*------global classes------*/
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #184e77;
 }
 
 ul {
@@ -26,12 +27,31 @@ ul {
   background: #fff;
   padding: 0 2em;
   height: 0rem;
-  min-height: 40vh;
+  min-height: 10vh;
   overflow: hidden;
 }
 
 .nav .nav-menu {
   justify-content: space-between;
+  color: #184e77;
+}
+
+.nav .toggle-menu {
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .toggle-menu .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
+
+.nav .toggle-menu .toggle-icons i {
+  font-size: 1.4rem;
 }
 
 .nav .nav-items {
@@ -47,8 +67,9 @@ ul {
 }
 
 .nav .nav-items .nav-link:hover {
-  background-color: #34a0a4;
+  background-color: #184e77;
   transition: background-color 0.5s ease;
+  cursor: pointer;
 }
 
 .nav .nav-items .nav-link:hover a {
@@ -65,4 +86,25 @@ ul {
 .nav .socials {
   padding: 1.4rem 0;
 }
+
+.nav .socials i {
+  padding: 0.2rem;
+}
+
+/*--potentially remove--*/
+.nav .socials i:hover {
+  color: #1f6398;
+}
+
 /*---x---navigation---x---*/
+
+@media only screen and (max-width: 750px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+
+  .nav .toggle-menu {
+    display: initial;
+  }
+}
