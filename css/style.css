@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
 }
 
-/*------global classes------*/
+/*--global classes--*/
 a {
   text-decoration: none !important;
   color: #184e77;
@@ -20,15 +20,40 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
 }
-/*---x---global classes---x---*/
 
-/*------navigation------*/
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+/*--x--global classes--x--*/
+
+/*--navigation--*/
 .nav {
   background: #fff;
   padding: 0 2em;
   height: 0rem;
   min-height: 10vh;
   overflow: hidden;
+  transition: height 1s ease-in-out;
 }
 
 .nav .nav-menu {
@@ -100,8 +125,39 @@ ul {
   color: #1f6398;
 }
 
-/*---x---navigation---x---*/
+/*--x--navigation--x--*/
 
+main .title {
+  background-image: url("/Users/poppyallen/Desktop/Coding Projects/blog-website/images/background-image.jpg");
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+}
+
+main .title .background {
+  padding-top: 10rem;
+  text-align: center;
+  color: #fff;
+}
+
+main .title h1,
+h3 {
+  margin: 0.3rem;
+}
+
+main .title .btn {
+  margin: 1.8rem;
+  background: cornsilk;
+}
+
+main .title .btn:hover {
+  background: transparent;
+  border: 1px solid;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+/*--responsive design--*/
 @media only screen and (max-width: 750px) {
   .nav .nav-menu,
   .nav .nav-items {
@@ -112,3 +168,4 @@ ul {
     display: initial;
   }
 }
+/*--x--responsive design--x--*/
