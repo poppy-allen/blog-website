@@ -6,4 +6,8 @@ $(document).ready(function () {
     $toggleMenu.click(function () {
         $nav.toggleClass('collapse');
     })
+    $('.carousel').carousel();
+
 });
+
+
